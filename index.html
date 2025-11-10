@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en" class="lang-en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Diogo Xavier · Big Data Engineer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="CV and portfolio of Diogo Xavier, Big Data Engineer specializing in Cloudera, Azure, Spark, and streaming data solutions." />
+  <style>
+    :root {
+      --bg: #f3f4f6;
+      --card-bg: #ffffff;
+      --text: #111827;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --accent: #2563eb;
+      --accent-soft: #eff6ff;
+      --radius-lg: 14px;
+      --radius-full: 999px;
+      --shadow-soft: 0 12px 30px rgba(15, 23, 42, 0.10);
+      --max-width: 950px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      display: flex;
+      justify-content: center;
+      padding: 20px 12px;
+    }
+
+    .page { max-width: var(--max-width); width: 100%; }
+
+    .lang-switch {
+      display: flex;
+      justify-content: flex-end;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .lang-btn {
+      border-radius: var(--radius-full);
+      border: 1px solid #d1d5db;
+      background: #ffffff;
+      padding: 4px 11px;
+      font-size: 0.78rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      color: var(--muted);
+      transition: all 0.18s ease;
+    }
+
+    .lang-btn.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #f9fafb;
+      box-shadow: 0 4px 10px rgba(37, 99, 235, 0.4);
+    }
+
+    header {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 22px;
+    }
+
+    @media (min-width: 760px) {
+      header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+
+    .name-block h1 {
+      font-size: 2.5rem;
+      letter-spacing: 0.03em;
+      color: #0f172a;
+    }
+
+    .name-block h2 {
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.24em;
+      margin-top: 4px;
+    }
+
+    .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .chip {
+      font-size: 0.75rem;
+      padding: 3px 10px;
+      border-radius: var(--radius-full);
+      border: 1px solid #e5e7eb;
+      background: #f9fafb;
+      color: var(--muted);
+    }
+
+    .contact {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 3px;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    @media (max-width: 759px) {
+      .contact { align-items: flex-start; margin-top: 6px; }
+    }
+
+    .contact a { color: var(--accent); text-decoration: none; }
+    .contact a:hover { text-decoration: underline; }
+
+    .btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+      justify-content: flex-end;
+    }
+
+    @media (max-width: 759px) {
+      .btn-row { justify-content: flex-start; }
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 13px;
+      border-radius: var(--radius-full);
+      border: 1px solid var(--accent);
+      font-size: 0.8rem;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background 0.15s ease, transform 0.1s ease, box-shadow 0.1s ease;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+  background: var(--accent);
+  color: #ffffff !important; /* force white text */
+  font-weight: 600;
+  border: 1px solid var(--accent);
+}
+
+.btn-primary:hover {
+  background: #1e40af; /* slightly darker blue for hover */
+  color: #ffffff !important;
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.4);
+}
+
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 16px rgba(37, 99, 235, 0.45);
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 18px;
+    }
+
+    @media (max-width: 800px) {
+      main { grid-template-columns: 1fr; }
+    }
+
+    section {
+      background: var(--card-bg);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      padding: 18px 18px 16px;
+      box-shadow: var(--shadow-soft);
+      margin-bottom: 14px;
+    }
+
+    h3.section-title {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    h3.section-title span { color: var(--accent); }
+
+    .summary-text {
+      font-size: 0.95rem;
+      color: var(--text);
+    }
+
+    .summary-text strong {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .item { margin-bottom: 14px; }
+    .item:last-child { margin-bottom: 0; }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 4px;
+    }
+
+    .item-title {
+      font-weight: 600;
+      font-size: 0.98rem;
+      color: var(--accent);
+    }
+
+    .item-role {
+      font-size: 0.86rem;
+      color: var(--text);
+    }
+
+    .item-location {
+      font-size: 0.8rem;
+      color: var(--muted);
+      text-align: right;
+    }
+
+    .item-date {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    ul.bullets {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 4px;
+    }
+
+    ul.bullets li {
+      position: relative;
+      padding-left: 14px;
+      font-size: 0.86rem;
+      color: var(--muted);
+      margin-bottom: 3px;
+    }
+
+    ul.bullets li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--accent);
+    }
+
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 6px;
+    }
+
+    .pill {
+      font-size: 0.78rem;
+      padding: 3px 9px;
+      border-radius: var(--radius-full);
+      background: var(--accent-soft);
+      color: var(--accent);
+      border: 1px solid rgba(37, 99, 235, 0.3);
+    }
+
+    footer {
+      margin-top: 12px;
+      font-size: 0.75rem;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .profile-pic {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border: 2px solid #e5e7eb;
+  margin-right: 18px;
+}
+
+@media (max-width: 760px) {
+  .profile-pic {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 10px;
+  }
+}
+
+    .en { display: block; }
+    .pt { display: none; }
+
+    .lang-pt .en { display: none; }
+    .lang-pt .pt { display: block; }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="lang-switch">
+      <button id="btn-en" class="lang-btn active">🇬🇧 English</button>
+      <button id="btn-pt" class="lang-btn">🇵🇹 Português</button>
+    </div>
+
+    <header>
+      <img src="1620847606375.jpeg" alt="Diogo Xavier" class="profile-pic" />
+      <div class="name-block">
+        <h1>Diogo Xavier</h1>
+        <h2>Big Data Engineer</h2>
+        <div class="chip-row">
+          <span class="chip">Data Engineering</span>
+          <span class="chip">Azure &amp; Cloudera</span>
+          <span class="chip">Spark &amp; Databricks · Kafka · Delta Lake</span>
+        </div>
+      </div>
+      <div class="contact">
+        <span>📞 (+351) 914 022 995</span>
+        <span>✉️ <a href="mailto:diogo.a.xavier10@gmail.com">diogo.a.xavier10@gmail.com</a></span>
+        <span>🔗 <a href="https://www.linkedin.com/in/diogo-xavier" target="_blank">linkedin.com/in/diogo-xavier</a></span>
+        <span>💻 <a href="https://github.com/DiogoXavier10" target="_blank">github.com/DiogoXavier10</a></span>
+        <div class="btn-row">
+          <!-- single button, JS swaps href + label -->
+          <a class="btn btn-primary" id="cv-btn" href="diogo_xavier_cv_with_photo_en.pdf" download>⬇ CV (PDF)</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- LEFT COLUMN -->
+      <div>
+        <section>
+          <h3 class="section-title">
+            <span class="en">SUMMARY</span>
+            <span class="pt">RESUMO</span>
+          </h3>
+          <p class="summary-text en">
+  Results-driven <strong>Data Engineer</strong> with experience in the
+  <strong>banking, telecommunications, and energy</strong> sectors. Skilled at leading
+  end-to-end data projects, mentoring teams, and developing reusable frameworks in
+  <strong>Scala, Python, and Java</strong>. Strong background in both
+  <strong>Cloudera</strong> and <strong>Azure</strong> ecosystems, with a focus on
+  <strong>Spark</strong>, <strong>Kafka</strong>, and <strong>Delta Lake</strong> architectures.
+  Eager to deepen expertise in <strong>cloud architectures and multi-cloud providers</strong>,
+  with a proven ability to <strong>adapt quickly</strong> to new technologies, environments,
+  and evolving business needs.
+</p>
+
+<p class="summary-text pt">
+  <strong>Data Engineer</strong> orientado a resultados, com experiência nos setores da
+  <strong>banca, telecomunicações e energia</strong>. Habituado a liderar projetos de dados
+  de ponta a ponta, apoiar equipas técnicas e desenvolver frameworks reutilizáveis em
+  <strong>Scala, Python e Java</strong>. Experiência sólida nos ecossistemas
+  <strong>Cloudera</strong> e <strong>Azure</strong>, com foco em arquiteturas baseadas em
+  <strong>Spark</strong>, <strong>Kafka</strong> e <strong>Delta Lake</strong>.
+  Motivado para aprofundar conhecimentos em <strong>arquiteturas cloud e provedores multi-cloud</strong>,
+  com forte capacidade de <strong>adaptação</strong> a novas tecnologias, ambientes e desafios.
+</p>
+        </section>
+
+        <section id="experience">
+          <h3 class="section-title">
+            <span class="en">EXPERIENCE</span>
+            <span class="pt">EXPERIÊNCIA</span>
+          </h3>
+
+          <!-- Santander -->
+          <div class="item">
+            <div class="item-header">
+              <div>
+                <div class="item-title">Santander Portugal</div>
+                <div class="item-role en">Big Data Engineer</div>
+                <div class="item-role pt">Big Data Engineer</div>
+              </div>
+              <div class="item-location">
+                <div class="en">
+                  Lisbon, Portugal<br />
+                  <span class="item-date">May 2021 – Present</span>
+                </div>
+                <div class="pt">
+                  Lisboa, Portugal<br />
+                  <span class="item-date">Mai 2021 – Presente</span>
+                </div>
+              </div>
+            </div>
+            <ul class="bullets en">
+              <li>Senior Data Engineer and technical lead overseeing full project lifecycles — from architecture and estimation to implementation and delivery.</li>
+              <li>Developed and maintained reusable data frameworks in <strong>Scala, Python, and Java</strong> in the Cloudera ecosystem, widely adopted across the bank.</li>
+              <li>Designed scalable ETL frameworks and pipelines on <strong>Azure Databricks</strong> using <strong>Spark</strong>, <strong>Delta Lake</strong>, and <strong>MongoDB Atlas</strong>.</li>
+              <li>Built <strong>Spring Boot microservices</strong> to support digital banking and data-driven workflows, improving automation and integration performance.</li>
+              <li>Led mainframe offloading to <strong>Oracle</strong> and <strong>MongoDB</strong> using <strong>IBM CDC</strong> and <strong>Kafka Confluent</strong>, reducing legacy reliance and improving data freshness.</li>
+              <li>Championed adoption of <strong>Kafka</strong>, <strong>KStreams</strong>, and the Confluent stack, enabling real-time data processing and streaming analytics.</li>
+              <li>Interviewed and helped onboard new engineers, ensuring technical fit and supporting mentorship within the team.</li>
+              <li>Defined best practices for data governance, DevOps pipelines, and reusable framework design to ensure quality, compliance, and maintainability.</li>
+            </ul>
+            <ul class="bullets pt">
+              <li>Senior Data Engineer e responsável técnico por projetos de dados de ponta a ponta — da arquitetura e estimativa à implementação e entrega.</li>
+              <li>Desenvolveu e manteve frameworks de dados reutilizáveis em <strong>Scala, Python e Java</strong> no ecossistema Cloudera, usadas por várias equipas do banco.</li>
+              <li>Desenhou frameworks ETL e pipelines escaláveis em <strong>Azure Databricks</strong> com <strong>Spark</strong>, <strong>Delta Lake</strong> e <strong>MongoDB Atlas</strong>.</li>
+              <li>Criou <strong>microserviços Spring Boot</strong> para suportar canais digitais e fluxos orientados a dados, melhorando automação e integração.</li>
+              <li>Liderou iniciativas de offloading de mainframe para <strong>Oracle</strong> e <strong>MongoDB</strong> com <strong>IBM CDC</strong> e <strong>Kafka Confluent</strong>, reduzindo dependência de legados e aumentando a frescura dos dados.</li>
+              <li>Promoveu a adoção de <strong>Kafka</strong>, <strong>KStreams</strong> e stack Confluent, permitindo processamento em tempo real e analytics em streaming.</li>
+              <li>Responsável por entrevistar e integrar novos elementos na equipa, garantindo alinhamento técnico e apoio na mentoria.</li>
+              <li>Definiu boas práticas de governação de dados, pipelines DevOps e desenho de frameworks reutilizáveis, assegurando qualidade, compliance e manutenibilidade.</li>
+            </ul>
+          </div>
+
+          <!-- Xpand IT -->
+          <div class="item">
+            <div class="item-header">
+              <div>
+                <div class="item-title">Xpand IT</div>
+                <div class="item-role en">Big Data Engineer</div>
+                <div class="item-role pt">Big Data Engineer</div>
+              </div>
+              <div class="item-location">
+                <div class="en">
+                  Lisbon, Portugal<br />
+                  <span class="item-date">Jan 2019 – May 2021</span>
+                </div>
+                <div class="pt">
+                  Lisboa, Portugal<br />
+                  <span class="item-date">Jan 2019 – Mai 2021</span>
+                </div>
+              </div>
+            </div>
+            <ul class="bullets en">
+              <li>Designed and implemented large-scale ingestion and transformation pipelines in <strong>Scala</strong>, <strong>Java</strong>, and <strong>Spark</strong> within the Cloudera ecosystem (Hive, Kudu, HBase, Impala, Kafka, Solr, Yarn).</li>
+              <li>Developed CDC-based ingestion frameworks using <strong>StreamSets</strong>, <strong>Kafka</strong>, and <strong>Sqoop</strong>, automating data integration workflows.</li>
+              <li>Built a <strong>Cloudera Metrics Collector</strong> in Scala, Spark, and Kudu, exposing predictive cluster insights through a <strong>Spring Boot REST API</strong>.</li>
+              <li>Delivered proofs of concept for large financial institutions, including full Cloudera cluster implementations and ingestion solutions.</li>
+              <li>Created internal libraries for ingestion, transformation, and monitoring, standardizing engineering practices across teams.</li>
+              <li>Worked with <strong>GoCD</strong>, <strong>NiFi</strong>, and Kerberos-secured environments, ensuring secure and reliable processing in production.</li>
+            </ul>
+            <ul class="bullets pt">
+              <li>Desenhou e implementou pipelines de ingestão e transformação em larga escala em <strong>Scala</strong>, <strong>Java</strong> e <strong>Spark</strong>, no ecossistema Cloudera (Hive, Kudu, HBase, Impala, Kafka, Solr, Yarn).</li>
+              <li>Desenvolveu frameworks de ingestão baseadas em CDC com <strong>StreamSets</strong>, <strong>Kafka</strong> e <strong>Sqoop</strong>, automatizando integrações de dados.</li>
+              <li>Criou um <strong>Cloudera Metrics Collector</strong> em Scala, Spark e Kudu, expondo métricas e previsões através de uma <strong>API REST Spring Boot</strong>.</li>
+              <li>Entregou provas de conceito para grandes instituições financeiras, incluindo clusters Cloudera completos e soluções de ingestão.</li>
+              <li>Desenvolveu bibliotecas internas para ingestão, transformação e monitorização, padronizando práticas de engenharia.</li>
+              <li>Trabalhou com <strong>GoCD</strong>, <strong>NiFi</strong> e ambientes com Kerberos, garantindo processamento seguro e fiável em produção.</li>
+            </ul>
+          </div>
+
+          <!-- Alter Solutions -->
+          <div class="item">
+            <div class="item-header">
+              <div>
+                <div class="item-title">Alter Solutions</div>
+                <div class="item-role en">Software Developer</div>
+                <div class="item-role pt">Programador de Software</div>
+              </div>
+              <div class="item-location">
+                <div class="en">
+                  Lisbon, Portugal<br />
+                  <span class="item-date">Oct 2017 – Dec 2018</span>
+                </div>
+                <div class="pt">
+                  Lisboa, Portugal<br />
+                  <span class="item-date">Out 2017 – Dez 2018</span>
+                </div>
+              </div>
+            </div>
+            <ul class="bullets en">
+              <li>Developed and maintained enterprise solutions on the <strong>Oracle CCB</strong> platform using Java, JavaScript, and SQL.</li>
+              <li>Improved data integrity and performance through ETL scripts and database optimization.</li>
+              <li>Collaborated with cross-functional teams to turn business requirements into robust, maintainable systems.</li>
+              <li>Built strong foundations in backend development, data modeling, and SDLC best practices.</li>
+            </ul>
+            <ul class="bullets pt">
+              <li>Desenvolveu e manteve soluções empresariais na plataforma <strong>Oracle CCB</strong> usando Java, JavaScript e SQL.</li>
+              <li>Melhorou a integridade e performance dos dados através de scripts ETL e otimização de base de dados.</li>
+              <li>Colaborou com equipas funcionais para transformar requisitos de negócio em sistemas robustos e fáceis de manter.</li>
+              <li>Consolidou bases em desenvolvimento backend, modelação de dados e boas práticas de ciclo de vida de software.</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <div>
+        <section>
+          <h3 class="section-title">
+            <span class="en">SKILLS</span>
+            <span class="pt">COMPETÊNCIAS</span>
+          </h3>
+
+          <div class="item">
+            <div class="item-role en">Core Stack</div>
+            <div class="item-role pt">Tecnologias Principais</div>
+            <div class="pill-list">
+              <span class="pill">Scala</span>
+              <span class="pill">Python</span>
+              <span class="pill">Java</span>
+              <span class="pill">SQL</span>
+              <span class="pill">Shell</span>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="item-role en">Big Data &amp; Cloud</div>
+            <div class="item-role pt">Big Data &amp; Cloud</div>
+            <div class="pill-list">
+              <span class="pill">Cloudera</span>
+              <span class="pill">Azure Databricks</span>
+              <span class="pill">Delta Lake</span>
+              <span class="pill">Spark</span>
+              <span class="pill">Kafka · Confluent</span>
+              <span class="pill">KStreams</span>
+              <span class="pill">IBM CDC</span>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="item-role en">Frameworks &amp; Tools</div>
+            <div class="item-role pt">Frameworks &amp; Ferramentas</div>
+            <div class="pill-list">
+              <span class="pill">Spring Boot</span>
+              <span class="pill">StreamSets</span>
+              <span class="pill">NiFi</span>
+              <span class="pill">GoCD</span>
+              <span class="pill">Control-M</span>
+              <span class="pill">Maven</span>
+              <span class="pill">Git</span>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="item-role en">Databases</div>
+            <div class="item-role pt">Bases de Dados</div>
+            <div class="pill-list">
+              <span class="pill">Oracle</span>
+              <span class="pill">MySQL</span>
+              <span class="pill">Postgres</span>
+              <span class="pill">Netezza</span>
+              <span class="pill">Hive/Impala</span>
+              <span class="pill">HBase</span>
+              <span class="pill">MongoDB Atlas</span>
+              <span class="pill">Delta</span>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="item-role en">Focus Areas</div>
+            <div class="item-role pt">Áreas de Foco</div>
+            <div class="pill-list">
+              <span class="pill en">Data Architecture</span>
+              <span class="pill pt">Arquitetura de Dados</span>
+              <span class="pill en">ETL Frameworks</span>
+              <span class="pill pt">Frameworks ETL</span>
+              <span class="pill en">Streaming Pipelines</span>
+              <span class="pill pt">Pipelines de Streaming</span>
+              <span class="pill">CDC</span>
+              <span class="pill">DevOps</span>
+              <span class="pill en">Data Governance</span>
+              <span class="pill pt">Governação de Dados</span>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h3 class="section-title">
+            <span class="en">EDUCATION</span>
+            <span class="pt">FORMAÇÃO</span>
+          </h3>
+
+          <div class="item">
+            <div class="item-title">Instituto Superior Técnico (IST)</div>
+            <div class="item-role en">MSc in Computer Science and Engineering</div>
+            <div class="item-role pt">Mestrado em Engenharia Informática e de Computadores</div>
+            <div class="item-date en">Jul 2016 – Oct 2017 · Distributed Systems &amp; Information Systems</div>
+            <div class="item-date pt">Jul 2016 – Out 2017 · Sistemas Distribuídos &amp; Sistemas de Informação</div>
+          </div>
+
+          <div class="item">
+            <div class="item-role en">BSc in Computer Science and Engineering</div>
+            <div class="item-role pt">Licenciatura em Engenharia Informática e de Computadores</div>
+            <div class="item-date en">Oct 2010 – Jul 2016</div>
+            <div class="item-date pt">Out 2010 – Jul 2016</div>
+          </div>
+
+          <div class="item">
+            <div class="item-title">European Innovation Academy (EIA)</div>
+            <div class="item-role en">Participant</div>
+            <div class="item-role pt">Participante</div>
+            <div class="item-date en">Jul 2022 – Aug 2022 · Entrepreneurship &amp; Innovation</div>
+            <div class="item-date pt">Jul 2022 – Ago 2022 · Empreendedorismo &amp; Inovação</div>
+          </div>
+        </section>
+
+        <section>
+          <h3 class="section-title">
+            <span class="en">CERTIFICATIONS &amp; COMMUNITY</span>
+            <span class="pt">CERTIFICAÇÕES &amp; COMUNIDADE</span>
+          </h3>
+
+          <div class="item">
+            <div class="item-role en">Certifications</div>
+            <div class="item-role pt">Certificações</div>
+            <ul class="bullets en">
+              <li>CCA Spark and Hadoop Developer, Cloudera — License 100-024-207 (Expired Feb 2023)</li>
+              <li>Azure Databricks Essentials, Microsoft — Expired Nov 2022</li>
+            </ul>
+            <ul class="bullets pt">
+              <li>CCA Spark and Hadoop Developer, Cloudera — Licença 100-024-207 (Expirou em Fev 2023)</li>
+              <li>Azure Databricks Essentials, Microsoft — Expirou em Nov 2022</li>
+            </ul>
+          </div>
+
+          <div class="item">
+            <div class="item-role en">Community &amp; Extracurriculars</div>
+            <div class="item-role pt">Comunidade &amp; Atividades Extra</div>
+            <ul class="bullets en">
+              <li>CoderDojo Lisbon — Mentor (2015–2016), teaching Scratch, LEGO Mindstorms EV3, and Python to kids.</li>
+              <li>Portuguese National Ice Hockey, HC Porto, Sintra Knights International — Competitive Ice/Inline Hockey Player.</li>
+              <li><strong>Date:</strong> All my life 😄</li>
+            </ul>
+            <ul class="bullets pt">
+              <li>CoderDojo Lisboa — Mentor (2015–2016), a ensinar Scratch, LEGO Mindstorms EV3 e Python a crianças.</li>
+              <li>Portuguese National Ice Hockey, HC Porto, Sintra Knights International — Jogador competitivo de hóquei em gelo/inline.</li>
+              <li><strong>Datas:</strong> Desde sempre 😄</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      Built by Diogo Xavier · Big Data Engineer · 🇬🇧 / 🇵🇹 ready
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      const root = document.documentElement;
+      const btnEn = document.getElementById('btn-en');
+      const btnPt = document.getElementById('btn-pt');
+      const cvBtn = document.getElementById('cv-btn');
+
+      function setLang(lang) {
+        root.classList.remove('lang-en', 'lang-pt');
+        root.classList.add('lang-' + lang);
+
+        btnEn.classList.toggle('active', lang === 'en');
+        btnPt.classList.toggle('active', lang === 'pt');
+
+        if (cvBtn) {
+          if (lang === 'en') {
+            cvBtn.href = 'diogo_xavier_cv_with_photo_en.pdf';
+            cvBtn.textContent = '⬇ CV (PDF)';
+          } else {
+            cvBtn.href = 'diogo_xavier_cv_with_photo_pt.pdf';
+            cvBtn.textContent = '⬇ CV (PDF - PT)';
+          }
+        }
+
+        try {
+          localStorage.setItem('cv-lang', lang);
+        } catch (e) {}
+      }
+
+      btnEn.addEventListener('click', () => setLang('en'));
+      btnPt.addEventListener('click', () => setLang('pt'));
+
+      try {
+        const saved = localStorage.getItem('cv-lang');
+        setLang(saved === 'pt' ? 'pt' : 'en');
+      } catch (e) {
+        setLang('en');
+      }
+    })();
+  </script>
+</body>
+</html>
